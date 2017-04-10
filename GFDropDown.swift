@@ -30,6 +30,8 @@ class GFDropDown: UIView, UITextFieldDelegate, UITableViewDelegate, UITableViewD
     
         didSet{
             if isShowList! {
+                
+                self.superview?.bringSubview(toFront: self)
                 //设置下拉动画
                 UIView.beginAnimations("ResizeForKeyBorard", context: nil
                 )
